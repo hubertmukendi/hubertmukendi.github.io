@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+width: 100%;
+height: 100%;
+min-width: 1000px;
+min-height: 1000px;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 3px;
+    text-align: left;
+}
+div.container {
+	width: flex;
+	Border: 5px light green;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+	height:flex;
+    background-color: GREEN;
+    clear: left;
+    text-align: center;
+	border: 2px solid black;
+	border-radius: 20px;
+}
+
+nav {
+    float: right;
+    max-width: flex;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 3px red;
+    padding: 1em;
+    overflow: hidden;
+}
+		
+	section#topbar{
+		height: flex;
+		width:flex;
+		}
+	
+	section#leftbar{
+		height:flex;
+		width:flex;
+		}
+	
+	section#mainbar{
+		height: flex;
+		width:flex;
+		}
+	
+	section#bottombar{
+		height: flex;
+		width:flex;
+		}
+		
+	div.divBorder{
+	Border: 2px solid;
+	Border-radius: 15px;
+	width:flex;
+	text-align: center;
+	box-shadow: 6px 6px 3px #888888
+	background-color:red;
+    }
+html { background-color: black; }
+body { background-color: white; }
+text { background-color: white; }
+
+	table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+.rotate {
+
+    transform: rotate(270deg);
+}
+
+	
+	</style>
+</head>
+<body>
+<form action="ems_table_update.php" method="post"/>
+<div class="divBorder">
+<header >
+   
+   <p > <h1>WESTERN CAPE GOVERNMENT HEALTH: EMS 
+  <img src="WESTERN.jpg" alt="western cape GRN health dep" style="width:80px;height:80px ;" align="middle"> </h1>
+  </p> 
+  <h1> Emergency Medical Services. - Patient Care Report Form </h1>
+
+	<p align="right">
+		<label for="DATE">Date:</label>
+		  <input name="DATE" id="input1" type="date"/> 
+	  </p>
+	  
+	<p align="left">
+		<label for="birth"> 
+		  <span>Voucher No BBA: </span> 
+		  <input type="text" id="input2" name="VoucherBB" maxlength="6" />
+		</label>
+	  </p>
+	  </header>
+</div>
+
+
+<div class="divBorder">
+
+<table style="width:100%">
+ 
+  <tr>
+    <td colspan ="1" ><table style="width:80%">
+  
+ <section id="topbar">
+ <table style="width:16%">
+ 
+ 
+  <caption>DISPATCH INFO</caption>
+ <tr>
+    <td>Incident</td>
+    <td><input type="time" id="input3" name="Incident" ></td>
+  </tr>
+ <tr>
+    <td>Dispatch</td>
+    <td><input type="time" id="input4" name="Dispatch"></td>
+  </tr>
+  <tr>
+    <td>Arr Scene (A):</td>
+    <td><input type="time" id="input5" name="ArrSceneA"></td>
+  </tr>
+<tr>
+    <td> Dep Scene: </td>
+    <td><input type="time" id="input6" name="DepScene"></td>
+  </tr>
+  <tr>
+
+<td>  Arr Dest 1: </td>
+    <td><input type="time" id="input7" name="ArrDest1"></td>
+  </tr>
+  <tr>
+<td>  Arr Dest 2: </td>
+    <td><input type="time" id="input8" name="ArrDest2"></td>
+  </tr>
+  <tr>
+
+<td> Available: </td>
+    <td><input type="time" id="input9" name="Available"></td>
+  </tr>
+  <tr>
+
+<td> Available: </td>
+    <td><input type="time" id="input10" name="ArrDest2"></td>
+  </tr>
+  <tr>
+  <th  colspan="2"> KM at *A*  = <input type="text" id="input11" name ="KMatA" size="10"></th> 
+ </tr>
+<tr>
+  <th colspan="2"> KM at End = <input type="text" id="input12" name ="KMatEnd" size="10"></th> 
+ </tr>
+<tr>
+  <th colspan="2"> KM Travelled = <input type="text" id="input13" name ="KMTravelled" size="10"></th>
+ </tr>
+</table>
+</section>
+</td>
+    <td><table width="1110" align="center">
+ <tr>
+<td colspan="6">Incident Address:<input type="textarea" id="input14" name="IncidentAddress" size="99"></td>
+<td colspan="5"> Incident No:<input type="text" id="input15" name="IncidentNo" size="45"></td>
+</tr>
+<tr>
+<td colspan="6"> Patient Name:<input type="textarea" id="input16" name="PatientName" size="99"></td></td>
+<td colspan="5">
+    <label for="Gender"> sex : </label>
+    <select id="input17" name="sex">
+      <option>Female</option>
+      <option>Male</option>
+      </optgroup>
+    </select>
+<label for="Gender"> age:</label>
+   <select id="input18" name="age">
+    <option>12-19</option>
+    <option>20-29</option>
+    <option>30-39</option>
+    <option>40-49</option>
+    <option>50-59</option>
+    <option>60+</option>
+    </optgroup>
+    </select><br>
+
+<label for="incident"> Call Type: </label>
+   <select id="input19" name="CallType">
+    <option>1.MVA</option>
+    <option>2.Assult</option>
+    <option>3.Burns</option>
+    <option>4.Electrical shock</option>
+    <option>5.Shooting</option>
+    <option>6.Train Casuality</option>
+    <option>7.Rape</option>
+    <option>8.Drowning-se</option>
+    <option>9.Drowing-f</option>
+    <option>10.Bites & stings</option>
+    <option>11.Sports Injuries</option>
+    <option>12.Domestic Accident</option>
+    <option>13.W.C.A</option>
+    <option>14.Other Trauma</option>
+    <option>15.Maternity</option>
+    <option>16.Gynaecology</option>
+    <option>17.Incubator-lo</option>
+    <option>18Incubator-Cor</option>
+    <option>19.Asthma</option>
+    <option>20.Stroke</option>
+    <option>21.AMI/ANGINA</option>
+    <option>22.Other Cardiac</option>
+    <option>23.Overdose</option>
+    <option>24.Accident Poisoning</option>
+    <option>25.Infetious disease</option>
+    <option>26.Diabetes</option>
+    <option>27.Psychiatric</option>
+    <option>28.Haemorrhage(non-trauma)</option>
+    <option>29.Other Medical</option>
+    <option>30.Other Surgical</option>
+    <option>31.Inter-hospital transfer</option>
+    <option>32.Out Patients</option>
+    <option>33.AllOther</option>
+    <option>34.Discharged to home</option>
+    <option>35.DOA</option>
+    <option>36.Bomb Treats(code calls)</option>
+    </optgroup>
+    </select>
+    
+<label for="Gender"> Priority:</label>
+   <select id="input20" name="Priority">
+    <option>1</option>
+    <option>2</option>
+    </optgroup>
+    </select>
+   </td>
+    </tr>
+ <tr>
+<td colspan="6">
+ <section id="mainbar" >
+ <label for="Requirements">Residential Address:</label>
+    <textarea name="ResidentialAddress" id="input21" maxlength="83.5" cols="100" rows="2"> </textarea>
+ </section>
+
+</td>
+<td colspan="5">Identity:<input type="text" id="input22" name="Identity" size="29"><br>
+     Telephone:<input type="text" id="input23" name="Telephone" size="26.9">
+</td>
+</tr>
+<tr>
+<td colspan="6">Next of kin:<input type="textarea" id="input24" name="NextOfKin" size="99"></td>
+<td colspan="5">Tel No:<input type="text" id="input25" name="KinTelNo" size="30"></td>
+</tr>
+
+<tr>
+<td colspan="6"=>Employer:<input type="textarea" id="input26" name="Employer" size="99"></td>
+<td colspan="5"> Tel No:<input type="text" id="input27" name="EmploTelNo" size= "30"></td>
+</tr>
+
+<tr>
+<td colspan="6">Employers's Address:<input type="textarea" id="input28" name="WorkAddress" size="99"></td>
+<td colspan="5"> W.C.A:<input type="text" id="input29" name="WCA" size="30"></td>
+</tr>
+
+<tr>
+<td colspan="6">Medical Aid:<input type="textarea" id="input30" name="medical_aid" size="99"></td>
+<td colspan="5"> Medical aid no:<input type="textarea" id="input31" name="medicalaid_no" size="22.8"><br>
+                Main Member:<input type="textarea" id="input32" name="Main_member" size="23"></td>
+</tr>
+
+<tr>
+<td colspan="6"> Law inforement officer on scene:<input type="textarea" id="input33" name="Law_inforcement" size="99"></td>
+<td colspan="5"> Service:<input type="textarea" id="input34" name="service" size="29"><br>
+R.A.F:<input type="textarea" id="input35" name="R_A_F" size="30"></td>
+</tr>
+
+<tr>
+<td colspan="6">Respond form:<input type="textarea" id="input36" name="Respond_Form" size="99"></td>
+<td colspan="5"> Dest 1:<input type="textarea" id="input37" name="Dest1" size="30"><br>
+Dest 2:<input type="textarea" id="input38" name=" Dest2" size="30"></td>
+</tr>
+</table>
+
+</td>
+    
+  </tr>
+</div>
+  
+<div class="divBorder">
+<table style="width:100%">
+
+<tr>
+<td colspan="6">
+ <section id="mainbar" >
+ <label for="Requirements">Presenting Complaint:</label>
+    <textarea name="Presenting_Complaint" id="input39" maxlength="83" cols="85" rows="3"> </textarea><br>
+	
+ <label for="Requirements">On Arrival:</label>
+    <textarea name="On_Arrival" id="input40" maxlength="83" cols="85" rows="3"> </textarea>
+	</td>
+	
+ </section>
+</td>
+<td 
+colspan="6">
+
+ <section id="mainbar" >
+ <label for="Requirements"> Schematic Representation of Scene:</label>
+    <textarea name="Schematic_Representation_of_Scene" id="input41" maxlength="85" cols="95" rows="8"> </textarea>  
+</td>
+</section>
+
+</tr>
+
+<tr>
+<td colspan="6">
+
+ 
+ <label for="Requirements"> Past Med/Sur Hx:</label>
+    <textarea name="Past_Med_SurHx" id="input42" maxlength="85" cols="85" rows="6"> </textarea> <br/> 
+	
+	  <input type="hidden" name="CVA" id="input43"  value="No ">
+  CVA <input type="checkbox" name="CVA" id="input43"  value="Yes">
+   
+      <input type="hidden" id="input44" name="HPT" value="No">
+  HPT <input type="checkbox" id="input44" name="HPT" value="Yes"> 
+  
+      <input type="hidden" id="input45" name="IHD" value="No">
+  IHD <input type="checkbox" id="input45" name="IHD" value="Yes"> 
+  
+           <input type="hidden" id="input46" name="DIABETES" value="No"> 
+  DIABETES <input type="checkbox" id="input46" name="DIABETES" value="Yes"> 
+  
+           <input type="hidden" id="input47" name="EPILEPSY" value="No">
+  EPILEPSY <input type="checkbox" id="input47" name="EPILEPSY" value="Yes"> 
+  
+       <input type="hidden" id="input48" name="T_B" value="No"> 
+  T.B. <input type="checkbox" id="input48" name="T_B" value="Yes"> 
+  
+         <input type="hidden" id="input49" name="ASTHMA" value="No">
+  ASTHMA <input type="checkbox" id="input49" name="ASTHMA" value="Yes"> 
+  
+        <input type="hidden" id="input50" name="COAD" value="No"> 
+   COAD <input type="checkbox" id="input50" name="COAD" value="Yes"> 
+   
+                 
+ <br/>Allergies  :<input type="text" id="input51" name="Allergies" size="83">
+
+
+</td>
+
+<td> 
+ <div class="rotate">MEDICATIONS</div>
+ </td>
+<th colspan="3"> 
+    1. = <input type = "text" name ="number1" size="20">
+<br>2. = <input type = "text" id="input52" name ="number2" size="20">
+<br>3. = <input type = "text" id="input53" name ="number3" size="20">
+<br>4. = <input type = "text" id="input54" name ="number4" size="20">
+<br>5.= <input type = "text" id="input55" name ="number5" size="20">
+</th>
+<th> 
+    Dose = <input type = "text" id="input56" name ="Dose1" size="6">
+<br>Dose = <input type = "text" id="input57" name ="Dose2" size="6">
+<br>Dose = <input type = "text" id="input58" name ="Dose3" size="6">
+<br>Dose = <input type = "text" id="input59" name ="Dose4" size="6">
+<br>Dose= <input type = "text" id="input60" name ="Dose5" size="6">
+</th>
+
+
+<th> 
+MECHANISM OF INJURY<br>
+
+      <input type = "hidden" id="input61" name ="Driver" size="6" value="No">
+Driver<input type = "radio" id="input61" name ="Driver" size="6" value="Yes">
+
+                      <input type = "hidden" id="input62" name ="Steering_unit_deformity" size="6" value="No">
+Steering unit deformity<input type = "radio" id="input62" name ="Steering_unit_deformity" size="6" value="Yes"><br/>
+
+         <input type = "hidden" id="input62" name ="Pedestrian" size="6" value= "No">
+Pedestrian<input type = "radio" id="input62" name ="Pedestrian" size="6" value= "Yes">
+
+        <input type = "hidden" id="input63" name ="Ejection" size="6" value= "No"><br/>
+Ejection<input type = "radio" id="input63" name ="Ejection" size="6" value= "Yes"><br/>
+
+         <input type = "hidden" id="input64" name ="Rollover" size="6" value= "No">
+Rollover<input type = "radio" id="input64" name ="Rollover" size="6" value= "Yes">
+
+        <input type = "hidden" id="input65" name ="Seatbelt" size="6" value= "No">
+Seatbelt<input type = "radio" id="input65" name ="Seatbelt" size="6" value= "Yes"><br/>
+
+                 <input type = "hidden" id="input66" name ="Extrication_min" size="6" value= "No">
+Extrication (min)<input type = "radio" id="input66" name ="Extrication_min" size="6" value= "Yes">
+
+         <input type = "hidden" id="input67" name ="Passenger" size="6" value= "No">
+Passenger<input type = "radio" id="input67" name ="Passenger" size="6" value= "Yes"><br/>
+
+                   <input type = "hidden" id="input68" name ="Windshield_Sterring" size="6" value= "No">
+Windshield Sterring<input type = "radio" id="input68" name ="Windshield_Sterring" size="6" value= "Yes">
+
+</th>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="divBorder">
+<table style="width:100%">
+ 
+  <tr>
+    <td><table style="width:100%">
+  <caption>SOUTH AFRICAN TRIAGE SCALE (NB. Triage code is compulsory)</caption>
+ 
+  <tr>
+      <td> open</td>
+      <td> B.P</td>
+      <td> H.R</td>
+      <td> R.R</td>
+      <td> C</td>
+      <td> AVP</td>
+      <td> Trauma</td>
+      <th> TEWS</th>
+      <th> Colour</th>
+</tr>
+
+<tr>
+      <th> Scene</th>
+      <td><input type="text" size ="3" id="input69" name="B_P_1"></td>
+      <td><input type="text" size ="3" id="input70" name="H_R_1"></td>
+      <td><input type="text" size ="3" id="input71" name="R_R_1"></td>
+      <td><input type="text" size ="3" id="input72" name="C_1"></td>
+      <td><input type="text" size ="3" id="input73" name="AVP_1"></td>
+      <td><input type="text" size ="3" id="input74" name="Traum_1"></td>
+      <th><input type="text" size ="3" id="input75" name="TEWS_1"></th>
+      <th><input type="color" name="color_1" value="#ff0000" id="input76"></th>
+</tr>
+<tr>
+      <th> Dest.1</th>
+      <td><input type="text" size ="3" id="input77" name="B_P_2"></td>
+      <td><input type="text" size ="3" id="input78" name="H_R_2"></td>
+      <td><input type="text" size ="3" id="input79" name="R_R_2"></td>
+      <td><input type="text" size ="3" id="input80" name="C_2"></td>
+      <td><input type="text" size ="3" id="input81" name="AVP_2"></td>
+      <td><input type="text" size ="3" id="input82" name="Traum_2"></td>
+      <th><input type="text" size ="3" id="input83" name="TEWS_2"></th>
+      <th><input type="color" name="color_2" value="#ff0000" id="input84"></th>
+</tr>
+<tr>
+      <th>Dest.2</th>
+      <td><input type="text" size ="3" id="input85" name="B_P_3"></td>
+      <td><input type="text" size ="3" id="input86" name="H_R_3"></td>
+      <td><input type="text" size ="3" id="input87" name="R_R_3"></td>
+      <td><input type="text" size ="3" id="input88" name="C_3"></td>
+      <td><input type="text" size ="3" id="input89" name="AVP_3"></td>
+      <td><input type="text" size ="3" id="input90" name="Traum_3"></td>
+      <th><input type="text" size ="3" id="input91" name="TEWS_3"></th>
+      <th><input type="color" name="color_3" value="#ff0000" id="input92"></th>
+</tr>
+<th colspan="8"> DISCRIMINATOR:<input type = "text" name ="DISCRIMINATOR" size="53" id="input93"></th>
+<th><input type="color" name="color_4" value="#ff0000" id="input94"></th>
+</table>
+</td>
+    <td><table style="width:30%">
+  <tr>
+                  <input type="hidden" name="Abrasion" value="No" id="input95">
+    <td> Abrasion <input type="checkbox" name="Abrasion" value="Yes" id="input95"></td>
+    <td>1</td>
+  </tr>
+
+  <tr>
+                 <input type="hidden" name="Avulsion" value="No" id="input96">
+    <td> Avulsion<input type="checkbox" name="Avulsion" value="Yes" id="input96"></td>
+    <td>2</td> 
+  </tr>
+
+  <tr>
+                    <input type="hidden" name="Amputation" value="No" id="input97">
+    <td> Amputation <input type="checkbox" name="Amputation" value="Yes" id="input97"></td>
+    <td>3</td>
+  </tr>
+
+ <tr>
+              <input type="hidden" name="Burns" value="No" id="input98">
+    <td> Burns<input type="checkbox" name="Burns" value="Yes" id="input98"></td>
+    <td>4</td>
+  </tr>
+
+ <tr>
+                  <input type="hidden" name="Conlusion" value="No" id="input99">
+    <td> Conlusion<input type="checkbox" name="Conlusion" value="Yes" id="input99"></td>
+    <td>5</td>
+  </tr>
+
+ <tr>
+                    <input type="hidden" name="Deformity" value="No" id="input100">
+    <td> Deformity <input type="checkbox" name="Deformity" value="Yes" id="input100"></td>
+    <td>6</td>
+  </tr>
+
+ <tr>
+                   <input type="hidden" name="Haematoma" value="No" id="input101">
+    <td> Haematoma <input type="checkbox" name="Haematoma" value="Yes" id="input101"> </td>
+    <td>7</td>
+  </tr>
+
+ <tr>
+                     <input type="hidden" name="Laceration" value="No" id="input102">
+    <td> Laceration <input type="checkbox" name="Laceration" value="Yes" id="input102"> </td>
+    <td>8</td>
+  </tr>
+
+ <tr>
+                 <input type="hidden" name="Oedema" value="No" id="input103">
+    <td>  Oedema <input type="checkbox" name="Oedema" value="Yes" id="input103"></td>
+    <td>9</td>
+  </tr>
+
+  <tr> 
+                  <input type="hidden" name="Puncture" value="No" id="input104">
+    <td> Puncture <input type="checkbox" name="Puncture" value="Yes" id="input104"></td>
+    <td>10</td>
+  </tr>
+
+ <tr> 
+                  <input type="hidden" name="Swelling" value="No" id="input105">
+    <td> Swelling <input type="checkbox" name="Swelling" value="Yes" id="input105"></td>
+    <td>11</td>
+  </tr>
+
+  <tr>
+                <input type="hidden" name="Tender" value="No" id="input106">
+    <td> Tender <input type="checkbox" name="Tender" value="Yes" id="input106"> </td>
+    <td>12</td>
+  </tr>
+  
+  
+   <p > <h1>
+  <img src="full bdy.png" alt="full medical body sketch" style="width:350px;height:380px ;" align="right"> </h1>
+  </p> 
+	
+  
+</table>
+</td>
+    
+  </tr>
+  <tr>
+    <td>    <table style="width:100%">
+  <tr>
+      <td colspan ="2"> Time   </td>
+      <td><input type="time" id="myTime" id="input107" name="time_1" ></td>
+      <td><input type="time" id="myTime" id="input108" name="time_2"></td>
+      <td><input type="time" id="myTime" id="input109" name="time_3" ></td>
+      <td><input type="time" id="myTime" id="input110" name="time_4"></td>
+      <td><input type="time" id="myTime" id="input111" name="time_5"></td>
+      <td><input type="time" id="myTime" id="input112" name="time_6"></td>
+</tr>
+<tr>
+      <td> A </td>
+      <td>Patient</td>
+      <td><input type="text" size ="9" id="input113" name="PT1"></td>
+      <td><input type="text" size ="9" id="input114" name="PT2"></td>
+      <td><input type="text" size ="9" id="input115" name="PT3"></td>
+      <td><input type="text" size ="9" id="input116" name="PT4"></td>
+      <td><input type="text" size ="9" id="input117" name="PT5"></td>
+      <td><input type="text" size ="9" id="input118" name="PT6"></td>
+</tr>
+
+<tr>
+      <td rowspan = "4"> B </td>
+      <td>RR</td>
+      <td><input type="text" size ="9" id="input119" name="RR1"></td>
+      <td><input type="text" size ="9" id="input120" name="RR2"></td>
+      <td><input type="text" size ="9" id="input121" name="RR3"></td>
+      <td><input type="text" size ="9" id="input122" name="RR4"></td>
+      <td><input type="text" size ="9" id="input123" name="RR5"></td>
+      <td><input type="text" size ="9" id="input124" name="RR6"></td>
+</tr>
+<tr>
+     
+      <td>Saturation% </td>
+      <td><input type="text" size ="9" id="input125"  name="sat1"></td>
+      <td><input type="text" size ="9" id="input126"  name="sat2"></td>
+      <td><input type="text" size ="9" id="input127"  name="sat3"></td>
+      <td><input type="text" size ="9" id="input128"  name="sat4"></td>
+      <td><input type="text" size ="9" id="input129" name="sat5"></td>
+      <td><input type="text" size ="9" id="input130"  name="sat6"></td>
+</tr>
+<tr>
+ 
+      <td>Rt.Lung</td>
+      <td><input type="text" size ="9" id="input131" name="RT_L1"></td>
+      <td><input type="text" size ="9" id="input132" name="RT_L2"></td>
+      <td><input type="text" size ="9" id="input133" name="RT_L3"></td>
+      <td><input type="text" size ="9" id="input134" name="RT_L4"></td>
+      <td><input type="text" size ="9" id="input135" name="RT_L5"></td>
+      <td><input type="text" size ="9" id="input136" name="RT_L6"></td>
+</tr>
+<tr>
+ 
+      <td>Lt.Lung</td>
+      <td><input type="text" size ="9" id="input137" name="LT_L1"></td>
+      <td><input type="text" size ="9" id="input138" name="LT_L2"></td>
+      <td><input type="text" size ="9" id="input139" name="LT_L3"></td>
+      <td><input type="text" size ="9" id="input140" name="LT_L4"></td>
+      <td><input type="text" size ="9" id="input141" name="LT_L5"></td>
+      <td><input type="text" size ="9" id="input142" name="LT_L6"></td>
+</tr>
+
+
+<tr>
+      <td rowspan = "4"> C </td>
+      <td>H.R</td>
+      <td><input type="text" size ="9" id="input143" name="HR_1"></td>
+      <td><input type="text" size ="9" id="input144" name="HR_2"></td>
+      <td><input type="text" size ="9" id="input145" name="HR_3"></td>
+      <td><input type="text" size ="9" id="input146" name="HR_4"></td>
+      <td><input type="text" size ="9" id="input147" name="HR_5"></td>
+      <td><input type="text" size ="9" id="input148" name="HR_6"></td>
+</tr>
+<tr>
+     
+      <td>B.P </td>
+      <td><input type="text" size ="9" id="input149" name="BP_1"></td>
+      <td><input type="text" size ="9" id="input150" name="BP_2"></td>
+      <td><input type="text" size ="9" id="input151" name="BP_3"></td>
+      <td><input type="text" size ="9" id="input152" name="BP_4"></td>
+      <td><input type="text" size ="9" id="input153" name="BP_5"></td>
+      <td><input type="text" size ="9" id="input154" name="BP_6"></td>
+</tr>
+<tr>
+ 
+      <td>C.R.T</td>
+      <td><input type="text" size ="9" id="input155" name="C_R_T_1"></td>
+      <td><input type="text" size ="9" id="input156" name="C_R_T_2"></td>
+      <td><input type="text" size ="9" id="input157" name="C_R_T_3"></td>
+      <td><input type="text" size ="9" id="input158" name="C_R_T_4"></td>
+      <td><input type="text" size ="9" id="input159" name="C_R_T_5"></td>
+      <td><input type="text" size ="9" id="input160" name="C_R_T_6"></td>
+</tr>
+<tr>
+ 
+      <td>E.C.G</td>
+      <td><input type="text" size ="9" id="input161" name="E_C_G_1"></td>
+      <td><input type="text" size ="9" id="input162" name="E_C_G_2"></td>
+      <td><input type="text" size ="9" id="input163" name="E_C_G_3"></td>
+      <td><input type="text" size ="9" id="input164" name="E_C_G_4"></td>
+      <td><input type="text" size ="9" id="input165" name="E_C_G_5"></td>
+      <td><input type="text" size ="9" id="input166" name="E_C_G_6"></td>
+</tr>
+
+<tr>
+      <td rowspan = "5"> D</td>
+      <td>G.C.S</td>
+      <td>E  V  M</td>
+      <td>E  V  M</td>
+      <td>E  V  M</td>
+      <td>E  V  M</td>
+      <td>E  V  M</td>
+      <td>E  V  M</td>
+</tr>
+<tr>
+     
+      <td>Rt.Pupil </td>
+      <td><input type="text" size ="9" id="input167" name="Rt_p11"></td>
+      <td><input type="text" size ="9" id="input168" name="Rt_p22"></td>
+      <td><input type="text" size ="9" id="input169" name="Rt_p33"></td>
+      <td><input type="text" size ="9" id="input170" name="Rt_p44"></td>
+      <td><input type="text" size ="9" id="input171" name="Rt_p55"></td>
+      <td><input type="text" size ="9" id="input172" name="Rt_p66"></td>
+</tr>
+
+<tr>
+     
+      <td>Rt. Pupil </td>
+      <td><input type="text" size ="9" id="input173" name="RT_P1"></td>
+      <td><input type="text" size ="9" id="input174" name="RT_P2"></td>
+      <td><input type="text" size ="9" id="input175" name="RT_P3"></td>
+      <td><input type="text" size ="9" id="input176" name="RT_P4"></td>
+      <td><input type="text" size ="9" id="input177" name="RT_P5"></td>
+      <td><input type="text" size ="9" id="input178" name="RT_P6"></td>
+</tr>
+<tr>
+ 
+      <td>Reaction</td>
+      <td><input type="text" size ="9" id="input179" name="Reaction1"></td>
+      <td><input type="text" size ="9" id="input180" name="Reaction2"></td>
+      <td><input type="text" size ="9" id="input181" name="Reaction3"></td>
+      <td><input type="text" size ="9" id="input182" name="Reaction4"></td>
+      <td><input type="text" size ="9" id="input183" name="Reaction5"></td>
+      <td><input type="text" size ="9" id="input184" name="Reaction6"></td>
+</tr>
+<tr>
+ 
+      <td>H.G.T</td>
+      <td><input type="text" size ="9" id="input185" name="H_G_T1" ></td>
+      <td><input type="text" size ="9" id="input184" name="H_G_T2"></td>
+      <td><input type="text" size ="9" id="input185" name="H_G_T3"></td>
+      <td><input type="text" size ="9" id="input186" name="H_G_T4"></td>
+      <td><input type="text" size ="9" id="input187" name="H_G_T5"></td>
+      <td><input type="text" size ="9" id="input188" name="H_G_T6"></td>
+
+</tr>
+
+</table></td>
+    <td> <label for="Requirements">Secondary Survey:</label>
+    <textarea name="Secondary_Survey" id="input189" maxlength="120" cols="73" rows="30"> </textarea></td> 
+  </t+++r>
+</table>
+</div>
+
+<div class="divBorder">
+<table style="width:100%">
+  <tr>
+    <td>
+
+<table style="width:100%">
+
+<td>
+    <th colspan ="2">Airway  </th>
+    <th colspan ="2">breathing</th>
+    <th colspan ="2">miscellaneous</th>
+  </tr>
+  <tr>
+    <td>Satisfactory</td>
+    <td><input type="text" size ="5" id="input190" name="Satisfactory"></td>
+    <td>Spontaneous</td>
+    <td><input type="text" size ="9" id="input191" name="Spontaneous"></td>
+    <td>Trauma</td>
+    <td><input type="text" size ="9" id="input192" name="Trauma"></td>
+  </tr>
+
+  <tr>
+    <td>Position</td>
+    <td><input type="text" size ="5" id="input193" name="Position"></td>
+    <td>Face Mask</td>
+    <td><input type="text" size ="9" id="input194" name="Face_Mask"></td>
+    <td>Scoop</td>
+    <td><input type="text" size ="9" id="input195" name="Scoop"></td>
+  </tr>
+  <tr>
+    <td>Oral airway</td>
+    <td><input type="text" size ="5" id="input196" name="Oral_airway"></td>
+    <td>Assisted</td>
+    <td><input type="text" size ="9" id="input197" name="Assisted"></td>
+    <td>Head Blocks</td>
+    <td><input type="text" size ="9" id="input198" name="Head_Blocks"></td>
+    </tr>
+<tr>
+    <td>Suction</td>
+    <td><input type="text" size ="5" id="input199" name="Suction"></td>
+    <td>BVM</td>
+    <td><input type="text" size ="9" id="input200" name="BVM"></td>
+    <td>Spider Harness</td>
+    <td><input type="text" size ="9" id="input201" name="Spider_Harness"></td>
+  </tr>
+<tr>
+    <td>Needle Cric.</td>
+    <td><input type="text" size ="5" id="input202" name="Needle_Cric"></td>
+    <td>Nebulisation</td>
+    <td><input type="text" size ="9" id="input203" name="Nebulisation"></td>
+    <td>C-collar</td>
+    <td><input type="text" size ="9" id="input204" name="C_collar"></td>
+  </tr>
+<tr>
+    <td>Magills</td>
+    <td><input type="text" size ="5" id="input205" name="Magills"></td>
+    <td>Chest Decomp</td>
+    <td><input type="text" size ="9" id="input206" name="Chest_Decomp"></td>
+    <td>K.E.D</td>
+    <td><input type="text" size ="9" id="input207" name="K_E_D"></td>
+  </tr>
+
+
+<th colspan ="4"> Circulation</th>
+<td>Pressure</td>
+<td><input type="text" size ="9" id="input208" name="Pressure"></td>
+</tr>
+
+  <tr>
+    <td>I.V Fluid </td>
+    <td><input type="text" size ="5" id="input209" name="I_V_Fluid"></td>
+    <td>Gauge</td>
+    <td><input type="text" size ="9" id="input210" name="Gauge"></td>
+    <td>Splint</td>
+    <td><input type="text" size ="9" id="input211" name="Splint"></td>  
+  </tr>
+
+  <tr>
+    <td>Vol.Infused </td>
+    <td><input type="text" size ="5" id="input212" name="Vol_Infused"></td>
+    <td>Site</td>
+    <td><input type="text" size ="9" id="input213" name="Site"></td>
+    <td>Traction</td>
+    <td><input type="text" size ="9" id="input214" name="Traction"></td>
+  </tr>
+
+  <tr>
+    <td>Stop bleeding </td>
+    <td><input type="text" size ="5" id="input215" name="Stop_bleeding"></td>
+    <td>Time up</td>
+    <td><input type="time" id="input216" name="Time_up"></td>
+    <td>Incubator</td>
+    <td><input type="text" size ="9" id="input217" name="Incubator"></td>
+  </tr>
+
+ <tr>
+    <td>Dressings </td>
+    <td><input type="text" size ="5" id="input218" name="Dressings"></td>
+    <td>DEFIB</td>
+    <td><input type="text" size ="9" id="input219" name="DEFIB"></td>
+    <td>Delivery</td>
+    <td><input type="text" size ="9" id="input220" name="Delivery"></td>
+  
+
+
+</table>
+
+
+</td>
+
+
+    <td>
+<table style="width:100%">
+  <tr>
+    <th>Time</th>
+    <th>Name</th>
+    <th>Dosage</th>
+    <th>Route</th>
+  </tr>
+  <tr>
+    <td><input type="time" id="input221" name="Time1"></td>
+    <td><input type="text" size ="24" id="input222" name="Name1"></td>
+    <td><input type="text" size ="22" id="input223" name="Dosage1"></td>
+    <td><input type="text" size ="22" name="Route1"></td>
+  </tr>
+  <tr>
+    <td><input type="time" id="input223" name="Time2"></td>
+    <td><input type="text" size ="24" id="input224" name="Name2"></td>
+    <td><input type="text" size ="22" id="input225" name="Dosage2"></td>
+    <td><input type="text" size ="22" id="input226" name="Route2"></td>
+  </tr>
+  <tr>
+    <td><input type="time" id="input227" name="Time3"></td>
+    <td><input type="text" size ="24" id="input228" name="Name3"></td>
+    <td><input type="text" size ="22" id="input229" name="Dosage3"></td>
+    <td><input type="text" size ="22" id="input230" name="Route3"></td>
+  </tr>
+<tr>
+    <td><input type="time" id="input231" name="Time4"></td>
+    <td><input type="text" size ="24" id="input232" name="Name4"></td>
+    <td><input type="text" size ="22" id="input233" name="Dosage4"></td>
+    <td><input type="text" size ="22" id="input234" name="Route4"></td>
+  </tr>
+  </td>
+
+<td colspan ="2"> CPR (start): <input type="text" size ="28" id="input235" name="CPR_start"></td>
+<td colspan ="2">CPR (End): <input type="text" size ="35" id="input236" name="CPR_End"></td>
+</tr>
+</td>
+
+<label for="Requirements"> Other Actions:</label>
+    <textarea name="Other_Actions" id="input237" maxlength="40" cols="105" rows="15"> </textarea><td>
+	
+
+	</table>
+	
+   
+  </tr>
+  <tr>
+    <td colspan ="2">
+	
+	<table style="width:100%">
+  <tr>
+    <td>Patient Refuses Transport/Treatment</td>
+    <td colspan ="2"> Signiture: <input type="text" size ="26" id="input238" name="Signiture"></td>
+    <td colspan ="3"> Comment: <input type="text" size ="40" id="input239" name="Comment"></td>
+  </tr>
+  <tr>
+    <td rowspan ="2"> Vehicle no  <input type="text" size ="15" id="input240" name="Vehicle_no"></td>
+    <td>Emergency Care Practitioner 1</td>
+    <td><p>
+      <label for="card"> 
+        <select id="card" name="Practitioner_1">
+          <option value="visa">ALS</option>
+          <option value="mc">ILS</option>
+          <option value="amex">BLS</option>
+        </select>
+      </label>
+    </p>
+</td>
+<td> HPCSA no  <input type="text" size ="15" id="input241" name="HPCSA_no1"></td>
+<td> Patient Received <input type="text" size ="15" id="input242" name="Patient_Received1"></td>
+<td rowspan ="2"> Qualification  <input type="text" size ="20" id="input243" name="Qualification1"></td>
+  </tr>
+  <tr>
+    <td>Emergency Care Practitioner 2</td>
+    <td><p>
+      <label for="card"> 
+        <select id="input244" name="Practitioner_2">
+          <option value="visa">ALS</option>
+          <option value="mc">ILS</option>
+          <option value="amex">BLS</option>
+        </select>
+      </label>
+    </p>
+</td>
+    <td>HPCSA no  <input type="text" size ="15" id="input245" name="HPCSA_no2"></td>
+<td> Qualification <input type="text" size ="15" id="input246" name="Qualification2"></td>
+
+  </tr>
+  
+</table>	
+	
+	</td>
+    
+  </tr>
+</table>
+</div>
+
+
+<div class= "divBorder" >
+
+<footer>EMERGENCY MEDICAL SERVICE                             PRACTICE NUMBER 009 004 9905           TEL: 948 9908 <input type="submit" value="Submit"/> </footer>
+</div>
+</form>
+</body>
+</html>
+
+
